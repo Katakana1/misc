@@ -1,6 +1,6 @@
 function gameLoop () {
   let now = Date.now();
-  let diff = (now - player.lastUpdate) / 1000;
+  let diff = (now - player.lastUpdate) * player.resetVal;
   if (player.generators[0].prestigeAmount.exponent >= singularityUnlockExp) {
     player.singularity.unlocked = true;
   }
