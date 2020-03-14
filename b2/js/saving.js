@@ -86,6 +86,7 @@ function exportGame() {
 function resetGameWithConfirmation() {
   if (confirm('Are you sure you want to reset the game?')) {
     resetGame();
+    player.resetBoost = 0.001;
   }
 }
 
@@ -103,7 +104,8 @@ function resetGame() {
     currentTheme: 'default',
     metaDisplay: true,
     saveType: 'full',
-    version: 3
+    version: 7,
+    resetBoost: player.resetBoost,
   }
   initializeTier();
   saveGame();
@@ -177,5 +179,9 @@ function saveFix () {
     player.version = 6;
     player.lowLayers = Infinity;
     player.highLayers = Infinity;
+  }
+  if (player.version < 7){
+    player.version = 7;
+    player.resetBoost = 0.001;
   }
 }
