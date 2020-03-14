@@ -13,7 +13,7 @@ let player = {
   currentTheme: 'default',
   metaDisplay: true,
   saveType: 'full',
-  version: 6,
+  version: 7,
   resetBoost: 0.001
 }
 
