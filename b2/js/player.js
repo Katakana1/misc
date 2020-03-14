@@ -13,7 +13,8 @@ let player = {
   currentTheme: 'default',
   metaDisplay: true,
   saveType: 'full',
-  version: 6
+  version: 6,
+  resetBoost: 0.001
 }
 
 initializeTier();
